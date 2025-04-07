@@ -18,67 +18,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Benisha</td>
-                <td>Login form</td>
-                <td>Creating the login form using html,css</td>
-                <td>Jan. 1, 2025, midnight</td>
-                <td>Jan. 1, 2025, midnight</td>
-                <td>
-                    <button class="btn btn-primary btn-sm me-2">Edit</button>
-                    <button class="btn btn-danger btn-sm">Delete</button>
-                </td>
+            <tr *ngFor="let task of tasks; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ task.name }}</td>
+              <td>{{ task.title }}</td>
+              <td>{{ task.description }}</td>
+              <td>{{ task.start }}</td>
+              <td>{{ task.end }}</td>
+              <td>
+                <button class="btn btn-primary btn-sm me-2">Edit</button>
+                <button class="btn btn-danger btn-sm" (click)="deleteTask(i)">Delete</button>
+              </td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Shaniha</td>
-                <td>Bookmark</td>
-                <td>'oaksnmdf</td>
-                <td>Jan. 1, 2025, midnight</td>
-                <td>Jan. 1, 2025, midnight</td>
-                <td>
-                    <button class="btn btn-primary btn-sm me-2">Edit</button>
-                    <button class="btn btn-danger btn-sm">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>aaaa</td>
-                <td>;kjansdf</td>
-                <td>'oaksnmdf</td>
-                <td>Jan. 1, 2025, midnight</td>
-                <td>Jan. 1, 2025, midnight</td>
-                <td>
-                    <button class="btn btn-primary btn-sm me-2">Edit</button>
-                    <button class="btn btn-danger btn-sm">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>bbbbb</td>
-                <td>hello</td>
-                <td>hello form</td>
-                <td>Jan. 1, 2025, midnight</td>
-                <td>Jan. 1, 2025, midnight</td>
-                <td>
-                    <button class="btn btn-primary btn-sm me-2">Edit</button>
-                    <button class="btn btn-danger btn-sm">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>tharun Raj</td>
-                <td>sample login form</td>
-                <td>sample login form using html css</td>
-                <td>Jan. 1, 2025, midnight</td>
-                <td>Jan. 1, 2025, midnight</td>
-                <td>
-                    <button class="btn btn-primary btn-sm me-2">Edit</button>
-                    <button class="btn btn-danger btn-sm">Delete</button>
-                </td>
-            </tr>
-        </tbody>
+          </tbody>
     </table>
 </div>
 </div>
